@@ -58,7 +58,7 @@ the QR codes in PNG and SVG formats.`,
 			if generateQRSVG(&Config{
 				inputFilename:  "qrdonkey_" + args[0] + ".png",
 				outputFilename: "qrdonkey_" + args[0] + ".svg",
-			}, "qrdonkey_"+args[0]+".png") != nil {
+			}) != nil {
 				fmt.Println("SVG generation went wrong, Donkey is sad. Try again.")
 				return
 			}
@@ -94,7 +94,7 @@ func generateQRPNG(link string) error {
 	return nil
 }
 
-func generateQRSVG(c *Config, image string) error {
+func generateQRSVG(c *Config) error {
 	var (
 		box          *png2svg.Box
 		x, y         int
