@@ -41,7 +41,6 @@ qrdonkey is a CLI tool for generating QR codes.
 This application is a tool to generate
 the QR codes in PNG and SVG formats.`,
 	Run: func(cmd *cobra.Command, args []string) {
-
 		svg, _ := cmd.Flags().GetBool("s")
 
 		if len(args) != 1 {
@@ -63,6 +62,7 @@ the QR codes in PNG and SVG formats.`,
 				return
 			}
 		}
+
 		PrintDonkey()
 	},
 }
